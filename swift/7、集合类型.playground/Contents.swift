@@ -110,3 +110,49 @@ dict3["04"]=nil
 dict3.removeValue(forKey: "03")
 
 
+//集合
+let cardno :Set=[1,2,3,1]
+//用数组字面量创建集合
+var citys:Set=["changsha","shanghai","wuhan","hef"]
+citys.count
+citys.isEmpty
+//插入
+citys.insert("guangzhou")
+//移除
+citys.remove("shanghai")
+citys
+//是否包含某元素
+citys.contains("Beijing")
+//转换为数组
+let cityArray=citys.sorted()
+
+//集合的运算：交差并补
+var x:Set=[1,2,3,4]
+let y:Set = [3,4,5,6]
+
+//交集
+x.intersection(y)
+//差集
+x.subtract(y)
+//并集
+x.union(y)
+//补集
+x.symmetricDifference(y)
+
+//集合间关系:相等，包含
+let h:Set=[1,2,3]
+let i:Set = [3,2,1,4]
+//可以相等
+h.isSubset(of: i)
+//严格子集
+h.isStrictSubset(of: i)
+//父集
+i.isSuperset(of: h)
+i.isStrictSuperset(of: h)
+//无交集
+let j:Set = [2,5,6]
+let k:Set = [9,0,7]
+j.isDisjoint(with: k)
+
+
+
